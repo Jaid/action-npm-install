@@ -2,9 +2,9 @@ name: Install Node dependencies
 description: GitHub Action for installing dependencies from package.json after checkout.
 author: Jaid
 inputs:
-  env:
+  nodeEnv:
     default: development
-    description: NODE_ENV setting for installing (affects the amount of dependencies installed, but I would recommend keeping development in any case)
+    description: NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case)
     required: true
 runs:
   using: node12
