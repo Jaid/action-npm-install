@@ -1,38 +1,14 @@
-name: Test Node project with Jest
-description: My action that gets executed on every commit in my Node package repositories
+name: Install Node dependencies
+description: GitHub Action for installing dependencies from package.json after checkout.
 author: Jaid
 inputs:
-  logHeapUsage:
-    default: true
-    description: Enables Jest's logHeapUsage feature
-    required: true
-  jestReportDirectory:
-    default: dist/jest
-    description: Directory where stats.json and coverage report is output in
-    required: true
-  requiredLinesCoverage:
-    default: 50
-    description: The percentage of covered lines needed (action will fail if coverage turns out to be lower than this)
-    required: true
-  requiredFunctionsCoverage:
-    default: 50
-    description: The percentage of covered functions needed (action will fail if coverage turns out to be lower than this)
-    required: true
-  requiredBranchesCoverage:
-    default: 50
-    description: The percentage of covered branches needed (action will fail if coverage turns out to be lower than this)
-    required: true
-  requiredStatementsCoverage:
-    default: 50
-    description: The percentage of covered statements needed (action will fail if coverage turns out to be lower than this)
-    required: true
-  failOnOpenHandles:
-    default: true
-    description: If true, tells Jest to detect open handles (slightly decreases performance) and fails action if open handles were found
+  env:
+    default: development
+    description: NODE_ENV setting for installing (affects the amount of dependencies installed, but I would recommend keeping development in any case)
     required: true
 runs:
   using: node12
   main: build/index.js
 branding:
-  icon: play-circle
+  icon: download
   color: green
