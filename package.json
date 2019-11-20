@@ -8,6 +8,7 @@
     "@actions/exec": "^1.0.1",
     "@actions/io": "^1.0.1",
     "@babel/runtime": "^7.7.2",
+    "guess-package-manager": "^1.1.2",
     "has-content": "^1.1.0"
   },
   "devDependencies": {
