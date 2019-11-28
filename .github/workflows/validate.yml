@@ -2,6 +2,8 @@ name: Validate and autofix
 on:
   push:
     branches: [master]
+  schedule:
+    - cron: 0 0 * * 1 # Every monday
 jobs:
   build:
     runs-on: ubuntu-latest
