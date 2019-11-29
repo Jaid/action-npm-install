@@ -1,6 +1,6 @@
 {
   "private": true,
-  "webpackConfigJaid": "cli",
+  "webpackConfigJaid": "githubAction",
   "version": "1.0.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
