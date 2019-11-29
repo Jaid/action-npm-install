@@ -18,6 +18,8 @@ jobs:
         uses: jaid/action-npm-install@master
       - name: Jest
         uses: jaid/action-jest@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
       - name: Uptodater
         uses: jaid/action-uptodater@master
         with:
