@@ -26,3 +26,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fix: "true"
           approve: "true"
+      - name: Build readme
+        uses: jaid/action-readme@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
