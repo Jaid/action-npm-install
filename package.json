@@ -26,5 +26,9 @@
     "prepareActionJest": "npm run build:prod"
   },
   "description": "GitHub Action for installing dependencies from package.json after checkout.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/action-npm-install"
+  }
 }
