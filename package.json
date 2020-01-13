@@ -25,5 +25,6 @@
     "build-push": "npm run build && git add build && git commit --sign --message 'Rebuilt src/' && git push",
     "prepareActionJest": "npm run build:prod"
   },
-  "description": "GitHub Action for installing dependencies from package.json after checkout."
+  "description": "GitHub Action for installing dependencies from package.json after checkout.",
+  "funding": "https://github.com/sponsors/jaid"
 }
