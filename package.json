@@ -30,5 +30,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/action-npm-install"
-  }
+  },
+  "name": "action-npm-install"
 }
