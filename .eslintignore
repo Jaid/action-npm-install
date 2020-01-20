@@ -1,3 +1,5 @@
-node_modules/
 dist/
-build/
+/node_modules/
+/test/fixtures/
+/build/
+/readme/*.js
