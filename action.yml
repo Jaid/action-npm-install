@@ -1,5 +1,5 @@
 name: Install Node dependencies
-description: GitHub Action for installing dependencies from package.json after checkout.
+description: GitHub Action for installing package.json dependencies. npm, Yarn and pnpm supported.
 author: Jaid
 inputs:
   nodeEnv:
