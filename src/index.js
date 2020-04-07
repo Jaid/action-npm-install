@@ -1,5 +1,5 @@
 import fsp from "@absolunet/fsp"
-import {getInput, setFailed} from "@actions/core"
+import {getInput, info, setFailed} from "@actions/core"
 import {exec} from "@actions/exec"
 import {which} from "@actions/io"
 import getBooleanActionInput from "get-boolean-action-input"
@@ -10,6 +10,7 @@ async function getExecInfo() {
   let packageManager
   if (packageManagerInput === "auto") {
     packageManager = guessPackageManager()
+    info(`Assuming package manager is "${packageManager}"`)
   } else {
     packageManager = packageManagerInput
   }
@@ -39,6 +40,7 @@ async function main() {
   if (skipIfNodeModulesExists) {
     const nodeModulesExists = await fsp.pathExists("node_modules")
     if (nodeModulesExists) {
+      info("Skipping, because node_modules already exists")
       return
     }
   }
