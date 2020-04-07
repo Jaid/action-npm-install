@@ -1,6 +1,6 @@
 import {getInput, setFailed} from "@actions/core"
-import {which} from "@actions/io"
 import {exec} from "@actions/exec"
+import {which} from "@actions/io"
 import guessPackageManager from "guess-package-manager"
 
 async function getExecInfo() {
