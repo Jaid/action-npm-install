@@ -17,7 +17,7 @@ This is usually needed to prepare for other steps in a GitHub Actions workflow.
 
 Example workflow that runs whenever commits are pushed on branch `master`.
 
-`.github/workflows/example.yml`:
+`.github/workflows/example.yml`
 ```yaml
 name: Try installing Node dependencies
 on:
@@ -58,7 +58,7 @@ jobs:
 <td>nodeEnv</td>
 <td>*</td>
 <td>development</td>
-<td>NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case)</td>
+<td>NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case).</td>
 </tr>
 <tr>
 <td>packageManager</td>
