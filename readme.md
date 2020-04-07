@@ -19,7 +19,7 @@ Example workflow that runs whenever commits are pushed on branch `master`.
 
 `.github/workflows/example.yml`:
 ```yaml
-name: Validate and autofix
+name: Try installing Node dependencies
 on:
   push:
     branches: [master]
@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: "13.9.0"
       - name: npm install
-        uses: jaid/action-npm-install@v1.2.0
+        uses: jaid/action-npm-install@v1.1.0
 ```
 
 
