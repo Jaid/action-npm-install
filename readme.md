@@ -7,7 +7,7 @@
 **GitHub Action for installing dependencies from package.json after checkout.**
 
 
-
+This is usually needed to prepare for other steps in a GitHub Actions workflow.
 
 
 
