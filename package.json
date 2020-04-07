@@ -22,7 +22,9 @@
     "rimraf": "^3.0.2",
     "webpack-config-jaid": "^11.7.2"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "rm -rf build && NODE_ENV=production webpack"
+  },
   "description": "GitHub Action for installing dependencies from package.json after checkout.",
   "funding": "https://github.com/sponsors/jaid",
   "repository": {
