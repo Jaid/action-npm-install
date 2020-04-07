@@ -6,6 +6,10 @@ inputs:
     default: development
     description: NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case)
     required: true
+  packageManager:
+    default: auto
+    description: Node package manager of this project. Can be "auto", "npm", "yarn" or "pnpm".
+    required: true
 runs:
   using: node12
   main: build/index.js

@@ -4,7 +4,13 @@ import {which} from "@actions/io"
 import guessPackageManager from "guess-package-manager"
 
 async function getExecInfo() {
-  const packageManager = guessPackageManager()
+  const packageManagerInput = getInput("packageManager")
+  let packageManager
+  if (packageManagerInput === "auto") {
+    packageManager = guessPackageManager()
+  } else {
+    packageManager = packageManagerInput
+  }
   if (packageManager === "yarn") {
     return {
       execPath: await which("npx", true),
@@ -17,10 +23,13 @@ async function getExecInfo() {
       execArgs: ["pnpm", "install"],
     }
   }
-  return {
-    execPath: await which("npm", true),
-    execArgs: ["install"],
+  if (packageManager === "npm") {
+    return {
+      execPath: await which("npm", true),
+      execArgs: ["install"],
+    }
   }
+  throw new Error(`Unsupported package manager "${packageManager}"`)
 }
 
 async function main() {

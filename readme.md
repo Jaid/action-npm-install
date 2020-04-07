@@ -43,6 +43,30 @@ jobs:
 
 
 
+## Options
+
+
+
+<table>
+<tr>
+<th></th>
+<th>Type</th>
+<th>Default</th>
+<th>Info</th>
+</tr>
+<tr>
+<td>nodeEnv</td>
+<td>string</td>
+<td>a</td>
+<td>NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case)</td>
+</tr>
+<tr>
+<td>packageManager</td>
+<td>string</td>
+<td>auto</td>
+<td>Can be "npm", "yarn", "pnpm" or "auto". "auto" will determine the package manager by looking into the repo's files. This is very accurate, so you normally don't want to change this.</td>
+</tr>
+</table>
 
 
 
