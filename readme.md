@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: "13.9.0"
       - name: npm install
-        uses: jaid/action-npm-install@v1.1.0
+        uses: jaid/action-npm-install@v1.2.1
 ```
 
 
