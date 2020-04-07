@@ -6,3 +6,7 @@ nodeEnv:
   type: string
   info: NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case).
   default: development
+skipIfNodeModulesExists:
+  type: boolean
+  default: "false"
+  info: If true and node_modules folder already exists, this action will be skipped assuming npm install is not required.

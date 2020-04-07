@@ -10,6 +10,10 @@ inputs:
     default: auto
     description: Node package manager of this project. Can be "auto", "npm", "yarn" or "pnpm".
     required: true
+  skipIfNodeModulesExists:
+    default: "false"
+    description: If true and node_modules folder already exists, this action will be skipped assuming npm install is not required.
+    required: true
 runs:
   using: node12
   main: build/index.js

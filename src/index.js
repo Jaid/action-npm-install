@@ -1,6 +1,8 @@
+import fsp from "@absolunet/fsp"
 import {getInput, setFailed} from "@actions/core"
 import {exec} from "@actions/exec"
 import {which} from "@actions/io"
+import getBooleanActionInput from "get-boolean-action-input"
 import guessPackageManager from "guess-package-manager"
 
 async function getExecInfo() {
@@ -33,17 +35,24 @@ async function getExecInfo() {
 }
 
 async function main() {
+  const skipIfNodeModulesExists = getBooleanActionInput("skipIfNodeModulesExists")
+  if (skipIfNodeModulesExists) {
+    const nodeModulesExists = await fsp.pathExists("node_modules")
+    if (nodeModulesExists) {
+      return
+    }
+  }
   const nodeEnv = getInput("nodeEnv")
   const {execPath, execArgs} = await getExecInfo()
-  const exitCode = await exec(execPath, execArgs, {
-    env: {
-      ...process.env,
-      NODE_ENV: nodeEnv,
-    },
-  })
+  const env = {
+    ...process.env,
+  }
+  if (nodeEnv) {
+    env.NODE_ENV = nodeEnv
+  }
+  const exitCode = await exec(execPath, execArgs, {env})
   if (exitCode !== 0) {
     setFailed(`Installation failed with code ${exitCode}`)
-    return
   }
 }
 
