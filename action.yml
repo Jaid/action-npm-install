@@ -8,7 +8,7 @@ inputs:
     required: true
   packageManager:
     default: auto
-    description: Node package manager of this project. Can be "auto", "npm", "yarn" or "pnpm".
+    description: Can be "npm", "yarn", "pnpm" or "auto". "auto" will determine the package manager by looking into the repo's files. This is very accurate, so you normally don't want to change this.
     required: true
   skipIfNodeModulesExists:
     default: "false"
