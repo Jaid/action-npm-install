@@ -29,7 +29,7 @@
     "prepareRelease": "npm run buildPush",
     "prepareActionJest": "npm run build:prod"
   },
-  "description": "GitHub Action for installing dependencies from package.json after checkout.",
+  "description": "GitHub Action for installing package.json dependencies. npm, Yarn and pnpm supported.",
   "funding": "https://github.com/sponsors/jaid",
   "repository": {
     "type": "git",
