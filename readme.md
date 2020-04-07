@@ -57,14 +57,20 @@ jobs:
 <tr>
 <td>nodeEnv</td>
 <td>string</td>
-<td>a</td>
-<td>NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case)</td>
+<td>development</td>
+<td>NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case).</td>
 </tr>
 <tr>
 <td>packageManager</td>
 <td>string</td>
 <td>auto</td>
 <td>Can be "npm", "yarn", "pnpm" or "auto". "auto" will determine the package manager by looking into the repo's files. This is very accurate, so you normally don't want to change this.</td>
+</tr>
+<tr>
+<td>skipIfNodeModulesExists</td>
+<td>boolean</td>
+<td>false</td>
+<td>If true and node_modules folder already exists, this action will be skipped assuming npm install is not required.</td>
 </tr>
 </table>
 
