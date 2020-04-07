@@ -23,7 +23,8 @@
   "scripts": {
     "build": "rimraf build && NODE_ENV=production webpack",
     "build-push": "npm run build && git add build && git commit --sign --message 'Rebuilt src/' && git push",
-    "prepareActionJest": "npm run build:prod"
+    "prepareActionJest": "npm run build:prod",
+    "testOnGithub": "name=$(npx package-name-cli) && npx git-flush-cli Changes && npm run build-push && npx git-flush-cli Rebuilt && cd ../test && git pull && npm run randomCommit && cd ../$name"
   },
   "description": "GitHub Action for installing dependencies from package.json after checkout.",
   "funding": "https://github.com/sponsors/jaid",
