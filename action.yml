@@ -4,7 +4,7 @@ author: Jaid
 inputs:
   nodeEnv:
     default: development
-    description: NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case)
+    description: NODE_ENV setting for installing execution (affects the amount of dependencies installed, but I would recommend keeping development in any case).
     required: true
   packageManager:
     default: auto

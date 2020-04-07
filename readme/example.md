@@ -1,6 +1,6 @@
 Example workflow that runs whenever commits are pushed on branch `master`.
 
-`.github/workflows/example.yml`:
+`.github/workflows/example.yml`
 ```yaml
 name: Try installing Node dependencies
 on:
