@@ -29,11 +29,13 @@
     "prepareRelease": "npm run buildPush",
     "prepareActionJest": "npm run build:prod"
   },
-  "description": "GitHub Action for installing Node dependencies from package.json with the correct package manager automatically selected.",
+  "description": "GitHub Action for installing dependencies from package.json after checkout.",
   "funding": "https://github.com/sponsors/jaid",
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/action-npm-install"
   },
-  "name": "action-npm-install"
+  "name": "action-npm-install",
+  "homepage": "https://github.com/Jaid/action-npm-install",
+  "keywords": []
 }
