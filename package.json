@@ -36,5 +36,21 @@
   },
   "name": "action-npm-install",
   "homepage": "https://github.com/Jaid/action-npm-install",
-  "keywords": []
+  "keywords": [
+    "action",
+    "actions",
+    "dependencies",
+    "dependency",
+    "github-action",
+    "github-actions",
+    "install",
+    "node",
+    "node-modules",
+    "nodejs",
+    "npm",
+    "pnpm",
+    "utility",
+    "workflow",
+    "yarn"
+  ]
 }
