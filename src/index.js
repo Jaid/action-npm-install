@@ -17,19 +17,19 @@ async function getExecInfo() {
   if (packageManager === "yarn") {
     return {
       execPath: await which("npx", true),
-      execArgs: ["yarn", "install"],
+      execArgs: ["yarn", "install", "--frozen-lockfile"],
     }
   }
   if (packageManager === "pnpm") {
     return {
       execPath: await which("npx", true),
-      execArgs: ["pnpm", "install"],
+      execArgs: ["pnpm", "install", "--frozen-lockfile"],
     }
   }
   if (packageManager === "npm") {
     return {
       execPath: await which("npm", true),
-      execArgs: ["install"],
+      execArgs: ["ci"],
     }
   }
   throw new Error(`Unsupported package manager "${packageManager}"`)
