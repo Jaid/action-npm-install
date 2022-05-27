@@ -13,7 +13,6 @@
     "has-content": "^1.1.1"
   },
   "devDependencies": {
-    "acorn": "^8.7.1",
     "babel-preset-jaid": "^15.0.4",
     "browserslist-config-jaid-node": "^3.0.0",
     "eslint": "^8.16.0",
