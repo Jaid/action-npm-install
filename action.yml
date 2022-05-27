@@ -15,7 +15,7 @@ inputs:
     description: If true and node_modules folder already exists, this action will be skipped assuming npm install is not required.
     required: false
 runs:
-  using: node12
+  using: node16
   main: build/index.js
 branding:
   icon: download
