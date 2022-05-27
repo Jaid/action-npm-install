@@ -2,7 +2,7 @@ import fsp from "@absolunet/fsp"
 import {getInput, info, setFailed} from "@actions/core"
 import {exec} from "@actions/exec"
 import {which} from "@actions/io"
-import getBooleanActionInput from "get-boolean-action-input"
+import getBooleanActionInput from "./lib/esm/get-boolean-action-input.js"
 import guessPackageManager from "guess-package-manager"
 
 async function getExecInfo() {
