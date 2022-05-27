@@ -3,7 +3,7 @@ import {getInput, info, setFailed} from "@actions/core"
 import {exec} from "@actions/exec"
 import {which} from "@actions/io"
 import getBooleanActionInput from "./lib/esm/get-boolean-action-input.js"
-import guessPackageManager from "guess-package-manager"
+import guessPackageManager from "./lib/esm/guess-package-manager.js"
 
 async function getExecInfo() {
   const packageManagerInput = getInput("packageManager")
